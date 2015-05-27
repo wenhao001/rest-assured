@@ -11,9 +11,11 @@ REST Assured is a Java DSL for simplifying testing of REST based services built 
        
 In order to use REST assured effectively it's recommended to statically import methods from the following classes:
 
-  * `com.jayway.restassured.RestAssured.*`
-  * `com.jayway.restassured.matcher.RestAssuredMatchers.*`
-  * `org.hamcrest.Matchers.*`
+{{{
+com.jayway.restassured.RestAssured.*
+com.jayway.restassured.matcher.RestAssuredMatchers.*
+org.hamcrest.Matchers.*
+}}}
 
 If you want to use [http://json-schema.org/ Json Schema] validation you should also statically import these methods:
   * `com.jayway.restassured.module.jsv.JsonSchemaValidator.*`
@@ -1649,11 +1651,18 @@ Or [https://rest-assured.googlecode.com/files/spring-mock-mvc-2.4.1-dist.zip dow
 == Bootstrapping RestAssuredMockMvc ==
 
 First of all you should statically import methods in:
-  * `com.jayway.restassured.module.mockmvc.RestAssuredMockMvc.*`
-  * `com.jayway.restassured.module.mockmvc.matcher.RestAssuredMockMvcMatchers.*`
-instead of those defined in 
- * `com.jayway.restassured.RestAssured.*`
- * `com.jayway.restassured.matcher.RestAssuredMatchers.*`
+{{{
+com.jayway.restassured.module.mockmvc.RestAssuredMockMvc.*
+com.jayway.restassured.module.mockmvc.matcher.RestAssuredMockMvcMatchers.*
+}}}
+
+instead of those defined in
+
+{{{
+com.jayway.restassured.RestAssured.*
+com.jayway.restassured.matcher.RestAssuredMatchers.*
+}}}
+
 Refer to [Usage#Static_imports static import] section of the documentation for additional static imports.
 
 In order to start a test using RestAssuredMockMvc you need to initialize it with a either a set of Controllers, a MockMvc instance or a WebApplicationContext from Spring. You can do this for a single request as seen in the previous example (`given().standaloneSetup(new GreetingController()). ..`) or you can do it statically:
