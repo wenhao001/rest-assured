@@ -112,7 +112,7 @@ org.hamcrest.Matchers.*
 If you want to use [http://json-schema.org/ Json Schema] validation you should also statically import these methods:
 
 {{{
- com.jayway.restassured.module.jsv.JsonSchemaValidator.*
+com.jayway.restassured.module.jsv.JsonSchemaValidator.*
 }}}
 
 Refer to [#JSON_Schema_validation Json Schema Validation] section for more info.
